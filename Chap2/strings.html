@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  var word1 = "Today ";
+  var word2 = "is ";
+  var word3 = "tomorrow\'s";
+  var word4 = "yesterday.";
+
+  var sentence1 = word1 + word2 + word3 + word4;
+  var sentence2 = word1.concat(word2, word3, word4);
+
+  console.log(sentence1);
+  console.log(sentence2);
+
+  var myStr = "I think, therefore I am.";
+
+  if (myStr.indexOf("think") != -1){
+    console.log(myStr);
+  }
+
+  var username = "Tobi";
+  var output = "<username> please enter your password: ";
+  output = output.replace("<username>", username);
+
+  console.log(output);
+
+  var t = "19:45:20";
+  var tArr = t.split(":");
+
+  var hour = tArr[0];
+  var minute = tArr[1];
+  var second = tArr[2];
+
+  console.log(hour);
+  console.log(minute);
+  console.log(second);
+});
+</script>
+</head>
+<body>
+</body>
+</html>

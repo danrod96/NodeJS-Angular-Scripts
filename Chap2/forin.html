@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+  for (var idx in days){
+    console.log("It's " + days[idx]);
+  }
+
+  console.log("Using break....");
+
+  //using break
+  var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+  for (var idx in days){
+    if (days[idx] == "Wednesday"){
+      break;  
+    }
+
+    console.log("It's " + days[idx]);
+  }
+
+  console.log("Using continue....");
+
+  for (var idx in days){
+    if (days[idx] == "Wednesday"){
+      continue;  
+    }
+
+    console.log("It's " + days[idx]);
+  }
+});
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "author": "Daniel Rodriguez",
+  "name": "censorify",
+  "version": "0.1.1",
+  "description": "Small script for censoring english words (profanities) out of text",
+  "main": "censortext",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danrod96/NodeJS-Samples/tree/master/Chap3/censorify" 
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "keywords": [
+    "profanities", "censor", "words"
+  ],
+  "engines": {
+    "node": "*"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  var obj = {
+    name: "My Object",
+    value: 7,
+    getValue: function(){ return this.name; }
+  };
+
+  var user = new Object();
+
+  user.first = "Chad";
+  user.last = "Martin";
+  user.getName = function(){ return this.first + " " + this.last }
+
+  function UserN(first, last){
+    this.first = first;
+    this.last = last;
+
+    this.getName = function(){ return this.first + " " + this.last; }
+  }
+
+  var newuser = UserN("Tim", "Dole");
+
+  console.log(obj.getValue());
+  console.log(user.getName());
+});
+</script>
+</head>
+<body>
+</body>
+</html>

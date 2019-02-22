@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	var arr = ["one", "two", "three"];
+
+	$("#array").html(arr[0]);
+	$("#array2").html(arr[1]);
+
+	var obj = {"name":"Toby", "occupation":"NodeJS Programmer", "age":24};
+
+	var age = obj.age;
+
+	$("#objage").html(age);
+});
+</script>
+</head>
+<body>
+<h1 id="array"></h1>
+<h1 id="array2"></h1>
+<h1 id="objage"></h1>
+</body>
+</html>

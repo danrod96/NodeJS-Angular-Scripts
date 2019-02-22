@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  function doCalc(num1, num2, calcFunction){
+    return calcFunction(num1, num2);
+  }
+
+  console.log(doCalc(5, 10, function(num1, num2){return num1 + num2;}));
+  console.log(doCalc(5, 10, function(num1, num2){return num1 * num2;}));
+  console.log(doCalc(5, 10, function(num1, num2){return num1 / num2;}));
+});
+</script>
+</head>
+<body>
+</body>
+</html>

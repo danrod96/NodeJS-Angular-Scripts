@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  var myVar = 1;
+
+  function writeIt(){
+    var myVar = 2;
+    console.log("myVar is " + myVar);
+    writeMore();
+  }
+
+  function writeMore(){
+    console.log("Variable = " + myVar);
+  }
+
+  writeIt();
+});
+</script>
+</head>
+<body>
+</body>
+</html>

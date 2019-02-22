@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  var arr = ["one", "two", "three"];
+
+  var arr2 = new Array();
+
+  arr2[0] = "one";
+  arr2[1] = "two";
+  arr2[2] = "three";
+
+  var arr3 = new Array();
+
+  arr3.push("one");
+  arr3.push("two");
+  arr3.push("three");
+
+  console.log(arr);
+  console.log(arr2);
+  console.log(arr3);
+
+  var arr4 = [1, 2, 3];
+
+  var arr5 = ["five", "six", "seven"];
+
+  var arr6 = arr4 + arr5;
+
+  var arr7 = arr4.concat(arr5);
+
+  console.log(arr6);
+  console.log(arr7);
+
+  var stuff = ["cherry", "onion", "bread", "honey", "cheese"];
+
+  for (var i = 0; i < stuff.length; i++){
+    console.log(stuff[i]);
+  }
+
+  console.log("Here we go again");
+
+  for (thing in stuff){
+    console.log(stuff[thing]);
+  }
+
+  var timeArr = ["12", "31", "01"];
+
+  var timeStr = timeArr.join("-");
+
+  console.log(timeStr);
+
+  var week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+  if (week.indexOf("Test") == -1){
+    console.log("No text found");
+  }
+
+  if (week.indexOf("Monday") != -1){
+    console.log("Happy Monday");
+  }
+});
+</script>
+</head>
+<body>
+</body>
+</html>
