@@ -6,7 +6,7 @@
   "main": "censortext",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danrod96/NodeJS-Samples/tree/master/Chap3/censorify" 
+    "url": "https://github.com/danrod96/NodeJS-Angular-Scripts/tree/master/Chap3/censorify" 
   },
   "dependencies": {
     "express": "^4.16.4"

@@ -1,6 +1,6 @@
-var censoredWords = ["insults here"];
+var censoredWords = ["bad", "sad", "money", "stuff"];
 
-var customCensoredWords = ["Custom Profanity"];
+var customCensoredWords = [""];
 
 function censor(inStr){
   for (idx in censoredWords){
