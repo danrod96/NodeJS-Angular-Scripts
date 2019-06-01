@@ -23,16 +23,19 @@ function Account(){
 
 Account.prototype.__proto__ = events.EventEmitter.prototype;
 
+//event handler
 function displayBalance(){
   console.log("Account balance: %d", this.balance);
 }
 
+//event handler
 function checkOverdraw(){
   if (this.balance < 0){
     console.log("Account overdrawn!!!");
   }
 }
 
+//another event handler
 function checkGoal(acc, goal){
   if (acc.balance > goal){
     console.log("Goal achieved!!!");
