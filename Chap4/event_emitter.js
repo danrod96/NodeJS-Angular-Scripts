@@ -21,6 +21,7 @@ function Account(){
   };
 }
 
+//we need this prototype to extend the EventEmitter class
 Account.prototype.__proto__ = events.EventEmitter.prototype;
 
 //event handler
@@ -44,7 +45,9 @@ function checkGoal(acc, goal){
 
 var account = new Account();
 
-//attaching callback functions to the Account object instance "balanceChanged" event
+//attaching callback functions (displayBalance, checkOverdraw) to the Account object instance "balanceChanged" event
+//everytime "BalanceChanged" is triggered, the callback functions will be placed in the 
+//event queue to be executed
 account.on("balanceChanged", displayBalance);
 account.on("balanceChanged", checkOverdraw);
 account.on("balanceChanged", function(){
@@ -57,5 +60,6 @@ account.deposit(320);
 account.deposit(600);
 account.withdraw(1200);
 
+//get the number of listeners attached to balanceChanged
 var listeners = account.listeners("balanceChanged");
 console.log(listeners);

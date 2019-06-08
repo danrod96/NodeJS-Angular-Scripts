@@ -6,6 +6,7 @@
   });
  }
 
+ //basic callback?
  var cars = ["Ferrari", "Porsche", "Bugatti"];
 
  for (var idx in cars){
@@ -19,6 +20,7 @@
   for (var idx in cars){
   var message = "Saw a " + cars[idx];
 
+  //wrapper function that provides closure to the logCar async function.
   (function(msg){
     logCar(message, function(){
       console.log("Closure callback: " + msg)
