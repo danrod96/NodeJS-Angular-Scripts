@@ -9,8 +9,9 @@ var stream = require('stream');
 var util = require('util');
 util.inherits(Answers, stream.Readable);
 
-//I suspect this is a constructor function
+//Creating the class Answers
 function Answers(opt){
+  //create an instance of the object call
   stream.Readable.call(this, opt);
   this.quotes = ["yes", "no", "maybe", "no way", "perhaps", "for sure"];
   this._index = 0;
