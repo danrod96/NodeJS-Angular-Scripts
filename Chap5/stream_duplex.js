@@ -17,21 +17,22 @@ util.inherits(Duplexer, stream.Duplex);
 function Duplexer(opt){
   //create an instance of the object call
   stream.Duplex.call(this, opt);
+  //data will have the items written by the "write" method
   this.data = [];
 }
 
 //Implementing the mandatory read method
 Duplexer.prototype._read = function readItem(size){
   //The shift method removes the first element from an array and returns that removed element. This method changes the length of the array
-  //gets the first item from the array
+  //In this case, gets the first item from the read stream (buffer)
   var chunk = this.data.shift();
 
-  //if the item is equal to "stop", pushes 'null'
+  //if the item is equal to "stop", pushes 'null' to the calling function
   if (chunk == "stop"){
     this.push(null);
   } else {
     if (chunk){
-      //if there is data, pushes it
+      //if there is data, pushes it to the calling function
       this.push(chunk);
     } else {
       //sets a timeout to call '_read' again
@@ -51,6 +52,7 @@ Duplexer.prototype._write = function(data, encoding, callback){
 var d = new Duplexer();
 
 //attach 'data' event to the inline function
+//chunk is an item read for the stream
 d.on('data', function(chunk){
   console.log('read', chunk.toString());
 });

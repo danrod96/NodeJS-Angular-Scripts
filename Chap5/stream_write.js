@@ -13,6 +13,7 @@ util.inherits(Writer, stream.Writable);
 function Writer(opt){
   //create an instance of the object call
   stream.Writable.call(this, opt);
+  //data will have the items written by the "write" method
   this.data = new Array();
 }
 
@@ -26,6 +27,7 @@ Writer.prototype._write = function(data, encoding, callback){
   callback();
 };
 
+//creating an instance of the Writer object
 var w = new Writer();
 
 for (var i = 1; i <= 5; i++){
@@ -36,6 +38,7 @@ for (var i = 1; i <= 5; i++){
 //sends the finish event, but writes "ItemLast" before
 w.end("ItemLast");
 
+//we need to print the data property explicitely
 console.log(w.data);
 
 
