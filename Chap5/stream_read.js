@@ -4,7 +4,6 @@ var stream = require('stream');
 
 //to implement a custom Readable stream object, we need to inherit the functionality
 //for Readable streams. The simplest way to do this is to use the util module's inherit method
-
 var util = require('util');
 
 //The Answers class inherits from Readable
@@ -37,6 +36,7 @@ console.log("Direct read: " + r.read().toString());
 
 //this data event handler reads the rest of items
 //if there's more data, keep reading it
+//data is an item read for the stream
 r.on('data', function(data){
   console.log("Callback read:" + data.toString());
 });
