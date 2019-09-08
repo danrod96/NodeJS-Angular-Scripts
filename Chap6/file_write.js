@@ -18,7 +18,10 @@ var configTxt = JSON.stringify(config);
 //write() options
 var options = {encoding: 'utf8', flag: 'w'};
 
-fs.writeFile('../config.txt', configTxt, options, function(err){
+//first param: path to file
+//second parameter: object that can contain encoding, mode and flag options
+//third parameter: callback function (for async write calls):
+fs.writeFile('/tmp/config.txt', configTxt, options, function(err){
   if (err){
     console.log("COnfig Write Failed.");
   } else {
