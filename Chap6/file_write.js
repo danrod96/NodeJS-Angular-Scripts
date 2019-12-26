@@ -9,7 +9,8 @@ var fs = require('fs');
 var config = {
   maxFiles: 20,
   maxConnections: 15,
-  rootPath: "/webroot"
+  rootPath: "/webroot",
+  hostName: "test.com"
 };
 
 //convert the JSON object into a string
