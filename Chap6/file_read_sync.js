@@ -6,11 +6,12 @@ var fs = require('fs');
 //open file in sync mode
 fd = fs.openSync("../config.txt", "r");
 
-var veggies = "";
+var info = "";
 
 do {
-  var buf = new Buffer(5);
+  var buf = new Buffer.alloc(5);
 
+  //fill buffer with zero's
   buf.fill();
 
   //fd: file descriptor
@@ -22,10 +23,10 @@ do {
   console.log("read %d bytes", bytes);
 
   //convert from buffer to String, and concat it
-  veggies += buf.toString();
+  info += buf.toString();
 } while (bytes > 0);
 
 fs.closeSync(fd);
 
-console.log("Veggies: " + veggies);
+console.log("info: " + info);
 

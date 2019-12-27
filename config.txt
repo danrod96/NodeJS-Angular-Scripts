@@ -1,1 +1,1 @@
-{"maxFiles":20,"maxConnections":15,"rootPath":"/webroot"}
+{"maxFiles":20,"maxConnections":15,"rootPath":"/webroot","hostname":"test.ca"}

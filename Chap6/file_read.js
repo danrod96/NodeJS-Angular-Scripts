@@ -1,6 +1,8 @@
 /* file_read.js */
 
 //Implementing a simple async readFile()
+//This NodeJS script shows how to implement a simple async readFile() call to read a JSON
+//object
 
 var fs = require('fs');
 
@@ -20,5 +22,6 @@ fs.readFile("../config.txt", options, function(err, data){
     console.log("Max Files: " + config.maxFiles);
     console.log("Max Connections: " + config.maxConnections);
     console.log("Root Path: " + config.rootPath);
+    console.log("Hostname: " + config.hostname);
   }
 });
