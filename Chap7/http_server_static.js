@@ -24,6 +24,7 @@ http.createServer(function(req, res){
   fs.readFile(ROOT_DIR + urlObj.pathname, function(err, data){
     //html file not found
     if (err){
+      //sends a 404 response status code
       res.writeHead(404);
       res.end(JSON.stringify(err));
       return;
