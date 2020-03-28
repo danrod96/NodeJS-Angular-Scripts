@@ -9,10 +9,12 @@ var net = require('net');
 var server = net.createServer(function(client){
   console.log('Client Connected');
 
+  //event handler for handling the data sent from the client
   client.on('data', function(data){
     console.log('Client sent: ' + data.toString());
   });
 
+  //event handler for dealing with the client closure
   client.on('end', function(){
     console.log('Client Disconnected');
   });
