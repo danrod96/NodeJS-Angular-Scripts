@@ -9,7 +9,7 @@
     "url": "https://github.com/danrod96/NodeJS-Angular-Scripts/tree/master/Chap3/censorify" 
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.18.2"
   },
   "keywords": [
     "profanities", "censor", "words"
